@@ -1,4 +1,5 @@
 .about__container {
+    height: 100vh;
     display: grid;
     grid-template-columns: 35% 50%;
     gap: 15%;
@@ -25,18 +26,17 @@
 }
 
 .about__cards {
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
 }
 
 .about__card {
-    display: grid;
-    place-items: center;
-    width: 12rem;
-    height: 8rem;
     background: var(--color-bg-variant);
     border: 1px solid transparent;
     border-radius: 1rem;
+    padding: 2rem;
+    text-align: center;
     transition: var(--transition);
 }
 
@@ -67,6 +67,7 @@
 }
 
 @media screen and (max-width: 1024px) {
+
     .about__container {
         grid-template-columns: 1fr;
         gap: 0;

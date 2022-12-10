@@ -1,5 +1,6 @@
 import React from "react";
 // import "./About.css";
+import "./About2.css";
 import Me from "../../assets/me-about.jpg";
 import { BiCodeBlock, BiFolderOpen } from "react-icons/bi";
 import { FiUsers } from "react-icons/fi";
@@ -10,7 +11,7 @@ const About = () => {
       <h5>Get To Know</h5>
       <h2>About Me</h2>
 
-      <div className="container-2 about__container">
+      <div className="container about__container">
         <div className="about__me">
           <div className="about__me-image">
             <img src={Me} alt="" />
@@ -36,17 +37,17 @@ const About = () => {
               <h5>Projects</h5>
               <small>80+ projects</small>
             </article>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit
-              similique, officia sed beatae deserunt vitae quae harum? Eius,
-              nobis quo eum aspernatur doloribus, accusamus officia odio culpa
-              nesciunt magnam illo?
-            </p>
-
-            <a href="#contact" className="btn btn-primary">
-              Let's Talk
-            </a>
           </div>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit
+            similique, officia sed beatae deserunt vitae quae harum? Eius, nobis
+            quo eum aspernatur doloribus, accusamus officia odio culpa nesciunt
+            magnam illo?
+          </p>
+
+          <a href="#contact" className="btn btn-primary">
+            Let's Talk
+          </a>
         </div>
       </div>
     </section>
