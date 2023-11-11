@@ -1,0 +1,150 @@
+@font-face {
+    font-family: IBMmono;
+    src: url(../assets/fonts/IBMPlexMono-Regular.woff2)
+}
+
+@font-face {
+    font-family: mono-bold;
+    src: url(../assets/fonts/IBMPlexMono-Bold.woff2);
+    font-weight: 700;
+}
+
+@font-face {
+    font-family: mono-semibold;
+    src: url(../assets/fonts/IBMPlexMono-SemiBold.woff2);
+    font-weight: 600;
+}
+
+@font-face {
+    font-family: mono-thin;
+    src: url(../assets/fonts/IBMPlexMono-Light.woff2);
+    font-weight: 100;
+}
+
+:root {
+    --clr-dark: #000000;
+    --clr-white: #FFFFFF;
+    --clr-gray: #9E9E9E;
+
+    --fs-regular: IBMmono;
+    --fs-bold: mono-bold;
+    --fs-thin: mono-thin;
+    --fs-semibold: mono-semibold;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+*::selection {
+    color: var(--clr-white);
+    background: var(--clr-gray);
+}
+
+html {
+    color-scheme: dark;
+}
+
+body {
+    background: var(--clr-dark);
+    color: var(--clr-white);
+    width: 100%;
+    height: 1005;
+}
+
+.container {
+    width: 95vw;
+    height: 100%;
+    margin: 1rem auto;
+}
+
+/* Hamburger styles */
+.hamburger {
+    background: transparent;
+    border: none;
+    z-index: 10;
+    position: absolute;
+}
+
+.hamburger_svg {
+    fill: var(--clr-white);
+}
+
+.line {
+    transition: 
+        y 0.3s ease 0.3s, 
+        rotate 0.3s ease, 
+        opacity 0s 0.3s;
+    transform-origin: center;
+}
+
+.hamburger[aria-expanded="true"] .line {
+    transition: 
+        y 0.3s ease, 
+        rotate 0.3s ease 0.3s, 
+        opacity 0s 0.3s;
+}
+
+.hamburger[aria-expanded="true"] :is(.top, .bottom) {
+    y: 45;
+}
+
+.hamburger[aria-expanded="true"] .top {
+    rotate: 45deg;
+}
+
+.hamburger[aria-expanded="true"] .middle {
+    opacity: 0;
+}
+
+.hamburger[aria-expanded="true"] .bottom {
+    rotate: -45deg;
+}
+
+/* navbar styles */
+.navlinks {
+    list-style: none;
+
+    height: 100%;
+    width: 100%;
+    z-index: 5;
+    background-color: var(--clr-dark);
+    
+    position: absolute;
+    top: -100%;
+    left: 0;
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    
+    transition: all 0.5s ease-in-out;
+}
+
+.navlinks a {
+    text-decoration: none;
+    color: var(--clr-white);
+    transition: all 0.3s ease;
+}
+
+.navlinks li {
+    font-size: 2rem;
+    font-family: IBMmono, monospace;
+}
+
+.navlinks a:hover{
+    color: var(--clr-gray);
+}
+
+section {
+    height: 100vh;
+    width: 90vw;
+    margin: 1rem auto;
+    display: flex;
+    align-items: center;
+    /* justify-content: center; */
+}
