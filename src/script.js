@@ -1,6 +1,7 @@
 // selecctors
 const menu = document.querySelector(".hamburger");
 const navlinks = document.querySelector(".navlinks");
+const navlink = document.querySelectorAll(".navlinks a");
 
 // event listeners
 menu.addEventListener("click", () => {
@@ -12,6 +13,13 @@ menu.addEventListener("click", () => {
     menu.setAttribute("aria-expanded", "false");
     navlinks.style.top = "-100%";
   }
+});
+
+navlink.forEach((item) => {
+  item.addEventListener("click", () => {
+    menu.setAttribute("aria-expanded", "false");
+    navlinks.style.top = "-100%";
+  });
 });
 
 // functions

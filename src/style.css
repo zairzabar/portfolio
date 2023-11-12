@@ -43,7 +43,18 @@
     background: var(--clr-gray);
 }
 
-html {
+img {
+    width: 100%;
+}
+
+button {
+    font-family: var(--fs-bold);
+    border: none;
+    outline: none;
+    background: transparent;
+}
+
+html{
     color-scheme: dark;
 }
 
@@ -56,7 +67,7 @@ body {
 
 .container {
     width: 95vw;
-    height: 100%;
+    /* height: 100vh; */
     margin: 1rem auto;
 }
 
@@ -65,7 +76,7 @@ body {
     background: transparent;
     border: none;
     z-index: 10;
-    position: absolute;
+    position: fixed;
 }
 
 .hamburger_svg {
@@ -112,7 +123,7 @@ body {
     z-index: 5;
     background-color: var(--clr-dark);
     
-    position: absolute;
+    position: fixed;
     top: -100%;
     left: 0;
     
@@ -142,9 +153,65 @@ body {
 
 section {
     height: 100vh;
-    width: 90vw;
+    width: 80vw;
     margin: 1rem auto;
+}
+
+.home {
     display: flex;
     align-items: center;
-    /* justify-content: center; */
+    justify-content: space-between;
+}
+
+.home__left {
+    flex: 1;
+}
+
+.home__left h3 {
+    font-family: var(--fs-thin);
+    color: var(--clr-gray);
+}
+
+.home__left h2 {
+    margin-block: 2.5rem;
+    font-family: var(--fs-regular);
+    font-size: 2.125rem;
+}
+
+.home__right {
+    flex: 1;
+}
+
+.btn__outline {
+    padding: 0.5rem 3rem;
+    font-size: 1rem;
+    border: 1px solid var(--clr-white);
+    font-weight: var(--fs-thin);
+    cursor: pointer;
+    text-transform: uppercase;
+}
+
+#loom-companion-mv3 {
+    display: none;
+}
+
+/* Media Queries */
+
+@media (max-width: 768px) {
+
+    .home {
+        flex-direction: column;
+        padding-top: 5rem;
+        text-align: center;
+        justify-content: space-around;
+    }
+
+    .home__left h3 {
+        font-size: 0.75rem;
+    }
+
+    .home__left h2 {
+        font-size: 1rem;
+        margin-block: 1.5rem;
+    }
 }
