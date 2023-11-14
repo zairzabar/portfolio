@@ -67,7 +67,6 @@ body {
 
 .container {
     width: 95vw;
-    /* height: 100vh; */
     margin: 1rem auto;
 }
 
@@ -151,25 +150,30 @@ body {
     color: var(--clr-gray);
 }
 
+
+/* General section styles */
 section {
-    height: 100vh;
     width: 80vw;
     margin: 1rem auto;
 }
 
+
+/* Home styles */
 .home {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    padding-top: 5rem;
 }
 
 .home__left {
     flex: 1;
 }
 
-.home__left h3 {
+.section__title {
     font-family: var(--fs-thin);
     color: var(--clr-gray);
+    letter-spacing: 0.5rem;
 }
 
 .home__left h2 {
@@ -189,11 +193,67 @@ section {
     font-weight: var(--fs-thin);
     cursor: pointer;
     text-transform: uppercase;
+    transition: all 0.2s ease;
+}
+
+.btn__outline:hover,
+.btn__outline:focus {
+    box-shadow: 5px 5px 0px var(--clr-gray);
+    translate: -2px -2px
 }
 
 #loom-companion-mv3 {
     display: none;
 }
+
+/* Skills section styles */
+
+.skills__container {
+    margin-block: 3rem;
+}
+
+.section__content {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.skills__desc {
+    font-family: IBMmono;
+    margin-block: 3rem;
+    flex: 2;
+}
+
+.skills__desc h2 {
+    margin-bottom: 2rem;
+}
+
+.skills__desc ul {
+    line-height: 1.8;
+}
+
+.skills__list {
+    flex: 1;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.skills__icon {
+    width: 5rem;
+    height: 5rem;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    transition: all 0.2s ease;
+}
+
+.skills__icon:hover {
+    translate: 0px -5px;
+    scale: 1.1;
+}
+
+
 
 /* Media Queries */
 
@@ -207,11 +267,38 @@ section {
     }
 
     .home__left h3 {
-        font-size: 0.75rem;
+        margin-bottom: 3rem
     }
 
     .home__left h2 {
+        margin-bottom: 3rem
+    }
+
+    .home__left h3, .skills__container h3 {
+        font-size: 0.75rem;
+    }
+
+    .home__left h2, .skills__desc h2 {
         font-size: 1rem;
         margin-block: 1.5rem;
+    }
+    
+    .skills__icon {
+        width: 4rem;
+    }
+
+    .skills__desc ul {
+        line-height: 1.5;
+        font-size: 0.8rem;
+    }
+    
+    .section__content {
+        flex-direction: column;
+        gap: 3rem;
+        align-items: center;
+    }
+
+    .section__title {
+        text-align: center;
     }
 }
