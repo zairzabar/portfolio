@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./src/style.css">
-    <title>Zair <Dev></title>
+    <title>Zair &lt;Dev&gt;</title>
 </head>
 <body>
     <div class="container">
@@ -24,13 +24,13 @@
                 <li><a href="#home">Home</a></li>
                 <li><a href="#skills">Skills</a></li>
                 <li><a href="#">Projects</a></li>
-                <li><a href="#">Contact Me</a></li>
+                <li><a href="#contact">Contact Me</a></li>
             </ul>
 
         </nav>
 
         <!-- Home Section -->
-        <section class="home" id="home">
+        <section class="home child" id="home">
             <div class="home__left">
                 <h3 class="section__title">&lt;Hello World&gt;</h3>
                 <h2>My name is Ouzair. I am a Frontend Developer from India.</h2>
@@ -42,7 +42,7 @@
         </section>
 
         <!-- Skills section -->
-        <section class="skills__container" id="skills">
+        <section class="skills__container child" id="skills">
             <h3 class="section__title">&lt;Skills&gt;</h3>
             <div class="section__content">
                 <div class="skills__desc">
@@ -99,6 +99,28 @@
 
         <!-- todo: Project Section -->
         <!-- todo: Contact Me section -->
+        <section class="contact__container child" id="contact">
+            <h3 class="section__title">&lt;Contact Me&gt;</h3>
+            <div class="contact__content">
+                <div class="contact__desc">
+                    <h2>Just drop a message or a mail and we can start our cooperation</h2>
+                    <div class="phone">
+                        <p>My Phone</p>
+                        <p>+91 981 927 5959</p>
+                    </div>
+                    <div class="email">
+                        <p>Email</p>
+                        <p>ouzair.ansari.7@gmail.com</p>
+                    </div>
+                </div>
+                <form class="contact__form">
+                    <input type="text" name="name" id="name" placeholder="Your name">
+                    <input type="email" name="email" id="email" placeholder="name@example.com">
+                    <textarea name="message" id="message" placeholder="Your message"></textarea>
+                    <button class="btn__outline form__submit">Send</button>
+                </form>
+            </div>
+        </section>
     </div>
 
 
