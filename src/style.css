@@ -68,7 +68,6 @@ body {
 .container {
     width: 95vw;
     margin: 1rem auto;
-    scroll-snap-type: y mandatory;
 }
 
 /* Hamburger styles */
@@ -158,9 +157,6 @@ section {
     margin: 1rem auto;
 }
 
-.child {
-    scroll-snap-align: center;
-}
 
 /* Home styles */
 .home {
