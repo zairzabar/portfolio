@@ -259,7 +259,8 @@ section {
 
 /* Contact Sstyles */
 .contact__container {
-    margin-block: 10rem;
+    margin-top: 10rem;
+    margin-bottom: 5rem;
 }
 
 .contact__content {
